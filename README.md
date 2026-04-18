@@ -9,7 +9,7 @@ To initiate the project, I was provided with 14 raw CSV files, including allowan
 - Phase 1: Bronze (The Ingestion Layer): I established the LANDING schema for all 14 tables. At this stage, no transformations were performed; the raw structure, including inconsistent headers and string-based dates, was maintained to ensure a direct audit trail back to the source systems.
 - Phase 2: Silver (The Integration & Cleansing Layer): I created the STAGING schema as outlined below. In the Silver layer, the 14 raw tables were joined and cleansed to form reliable business entities. 
 - Phase 3: Gold (The Curated Analytics Layer): The final Gold layer transforms the cleansed Silver data into the star schema depicted in the model. I established the MARTS schema for this purpose.
-Dimensional Modelling: The original 14 files were consolidated into five high-performance dimension tables (e.g., dim_employees, dim_contracts) and four fact tables (fact_timesheet, fact_bonuses, fact_allowances, fact_employee_leaves).
+
 The detailed description of the Medallion Architecture Transformation is included in the attached SQL files.
 
 # Power BI Integration & Semantic Modeling
