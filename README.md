@@ -5,7 +5,7 @@ An End-to-End Analytics Engineering Solution for Australian Payroll Remediation
 In response to the Fair Work Legislation Amendment (Closing Loopholes) Act 2023, this project was developed to identify payroll non-compliance. Effective January 1, 2025, intentional underpayment of staff in Australia carries significant criminal penalties. This solution helps organisations identify "Required Amounts"—including wages, allowances, and leave entitlements—to ensure legal compliance and operational efficiency. 
 
 # Data Engineering with MS-SQL
-To initiate the project, I was provided with 14 raw CSV files, including allowance, bonus, combined_holidays, contract_details, dim_dates, employee_details, employee_leave, junior_pay_rates, minimum_pay_rates, pay_rate_adjustments, roster, tax_rates, time_off_in_liew, and timesheet. Given this volume of CSV files, I adopted the Medallion Architecture Transformation:
+To initiate the project, I was provided with 14 raw CSV files (see attachment). Given this volume of CSV files, I adopted the Medallion Architecture Transformation:
 - Phase 1: Bronze (The Ingestion Layer): I established the LANDING schema for all 14 tables. At this stage, no transformations were performed; the raw structure, including inconsistent headers and string-based dates, was maintained to ensure a direct audit trail back to the source systems.
 - Phase 2: Silver (The Integration & Cleansing Layer): I created the STAGING schema as outlined below. In the Silver layer, the 14 raw tables were joined and cleansed to form reliable business entities. 
 - Phase 3: Gold (The Curated Analytics Layer): The final Gold layer transforms the cleansed Silver data into the star schema depicted in the model. I established the MARTS schema for this purpose.
@@ -41,7 +41,7 @@ Employee Analysis Dashboard
 
 # Strategic Business Insights
 1. Governance: Contract & Compliance Alignment
-I identified 23.81% of the workforce was associated with "Expired" contracts while maintaining "Active" employment status. This structural misalignment was identified as the primary catalyst for systemic payroll discrepancies. Standardizing contract renewal workflows is a prerequisite for long-term compliance under the Closing Loopholes Act.
+I identified 23.81% of the workforce was associated with "Expired" contracts while maintaining "Active" employment status. This structural misalignment was identified as the primary catalyst for systemic payroll discrepancies. Standardising contract renewal workflows is a prerequisite for long-term compliance under the Closing Loopholes Act.
 
 2.  Operational Risk: Workforce Burnout & Retention: Granular analysis of high-performing individuals (e.g., Andrea Collins) revealed a critical imbalance: 315 hours of overtime accrued against only 38 total leave hours. Reliance on excessive overtime indicates a potential burnout threshold. My analysis would provide leadership with the data needed to initiate proactive mental health interventions and resource-planning adjustments.
 
@@ -50,7 +50,7 @@ I identified 23.81% of the workforce was associated with "Expired" contracts whi
 # Recommendaton
 Based on the comprehensive analysis on the payroll and employment leave behaviours, I would recommend the further actions to ensure compliance with new payroll requirements: 
 - Conducting a deep-dive audit into the "Mandatory Payment" logic for the specific cohorts affected to ensure that all Award-based allowances and superannuation contributions are included in the back-pay calculation.
-Analyze the overpayment spikes to determine if they are caused by incorrect "Public Holiday" multipliers or automated bonus triggers.
+- Analysing the overpayment spikes to determine if they are caused by incorrect "Public Holiday" multipliers or automated bonus triggers.
 - Developing a "Recoupment Policy" for future overpayments that complies with Fair Work regulations regarding deductions.
 - Create an automated workflow that notifies Department Heads 30, 60, and 90 days before a contract expires.
 - Mandating "Forced Leave" or "TOIL" (Time Off In Lieu) clearing for employees exceeding a specific overtime-to-base-hour ratio to reduce the financial liability of accrued leave and protect employee well-being.
