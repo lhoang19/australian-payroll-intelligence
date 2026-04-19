@@ -47,7 +47,7 @@ I identified 23.81% of the workforce was associated with "Expired" contracts whi
 
 3. Financial Recovery: Identifying Operational Leakage. There was a total of $5.39M in overpayments, with significant spikes correlating to peak operational periods (December).The "Paid Amount" frequently deviates from the "Mandatory Payment" logic. By implementing the automated audit framework developed in this project, the organization could reclaim substantial capital and optimize its payroll logic to prevent future leakage.
 
-# Recommendaton
+# Recommendations
 Based on the comprehensive analysis on the payroll and employment leave behaviours, I would recommend the further actions to ensure compliance with new payroll requirements: 
 - Conducting a deep-dive audit into the "Mandatory Payment" logic for the specific cohorts affected to ensure that all Award-based allowances and superannuation contributions are included in the back-pay calculation.
 - Analysing the overpayment spikes to determine if they are caused by incorrect "Public Holiday" multipliers or automated bonus triggers.
