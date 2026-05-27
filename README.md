@@ -2,12 +2,12 @@
 An End-to-End Analytics Engineering Solution for Australian Payroll Remediation
 
 # Business Problem Statement
-In response to the Fair Work Legislation Amendment (Closing Loopholes) Act 2023, this project was developed to identify payroll non-compliance. Effective January 1, 2025, intentional underpayment of staff in Australia carries significant criminal penalties. This solution helps organisations identify "Required Amounts"—including wages, allowances, and leave entitlements—to ensure legal compliance and operational efficiency. The project 
+In response to the Fair Work Legislation Amendment (Closing Loopholes) Act 2023, this project was developed to identify payroll non-compliance. Effective January 1, 2025, intentional underpayment of staff in Australia carries significant criminal penalties. This solution helps organisations identify "Required Amounts"—including wages, allowances, and leave entitlements—to ensure legal compliance and operational efficiency. The project also captured employment insights to help identify gaps in employment payment and labour allocation throughout the employment cycles. 
 
 # Data Engineering with MS-SQL
 This project generated mock payroll-related datasets for a multi-industry Australian business. The data includes employee details, bonuses, allowances, time off in lieu, and history records, while maintaining data integrity and realistic relationships. To initiate the project, I was provided with 14 raw CSV files (see attachment). Given this volume of CSV files, I adopted the Medallion Architecture Transformation:
 
-- Phase 1: Bronze (The Ingestion Layer): I established the LANDING schema for all 14 tables. At this stage, no transformations were performed; the raw structure, including inconsistent headers and string-based dates, was maintained to ensure a direct audit trail back to the source systems.
+- Phase 1: I established the LANDING schema for all 14 tables. At this stage, no transformations were performed; the raw structure, including inconsistent headers and string-based dates, was maintained to ensure a direct audit trail back to the source systems.
   
 - Phase 2: Silver (The Integration & Cleansing Layer): I created the STAGING schema as outlined below. In the Silver layer, the 14 raw tables were joined and cleansed to form reliable business entities.
 
@@ -37,12 +37,11 @@ Semantic Model diagram illustrating the Star Schema on fact tables and dimension
 
 - For Visual Analytics: I developed an interactive dashboard suite comprising two specialised views: Payroll Remediation (risk-focused) and Employee Analysis (productivity-focused). To faciliate the interacitve dashboards, I also developed comprehensive DAX calculations in the Measures: Employmnet Count, Mandatory Payment, Overpayment Amount, Paid Amount, Total Allowance, Total Bonus, Total Overpayment, Total Overtime Hours, Total Underpayment, Total Undertime Hours, and Underpayment Amount. These measures acted as Key Performance Indicator (KPI) cards to demonstate overall payroll insights on employment. 
 
-<img width="1266" height="706" alt="Screenshot 2026-04-18 163518" src="https://github.com/user-attachments/assets/eda7955b-986c-409d-8f11-077f2815ee15" />
+<img width="1402" height="787" alt="image" src="https://github.com/user-attachments/assets/b0af6365-2d7e-4804-908a-d9a59c49c534" />
 
 Payroll Remediation Dashboard
 
-
-<img width="1247" height="699" alt="Screenshot 2026-04-18 154244" src="https://github.com/user-attachments/assets/138ca8d6-f01a-445a-8887-f67bcb34b3b3" />
+<img width="1396" height="771" alt="image" src="https://github.com/user-attachments/assets/171003bf-890b-45eb-b41e-483b42ef1510" />
 
 Employee Analysis Dashboard
 
